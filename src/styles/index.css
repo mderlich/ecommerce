@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+header{
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: #fff ; /* transparent // rgba(0,0,0,0.5)*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+#root{  /* OBS va #root por REACT sino seria body, ver index.html */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+
+max-width: 1200px;
+margin: auto;
+
+
+}
+
+footer{
+
+text-align: center;
+padding: 30px;
+}
+
+
+
+
