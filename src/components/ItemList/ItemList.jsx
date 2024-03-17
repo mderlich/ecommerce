@@ -1,14 +1,13 @@
 import { Item } from "../Item/Item"
 
 
-export const ItemList = ({ products }) => {
+export const ItemList = ({ productsList }) => {
   return (
     <>
       <div className="d-flex  justify-content-between">
-        {/* Renderizado condicional...  */}
         {
           // OBS... requiere indicar key={product.id}
-          products.map(product => (
+          productsList.map(product => (
             <Item key={product.id} {...product} />
           ))
           // --------------------------------------------

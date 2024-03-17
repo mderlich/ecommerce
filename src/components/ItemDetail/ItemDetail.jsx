@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom"
+import { ItemCount } from "../ItemCount/ItemCount";
 
-export const Item = ({ id, name, img, description, stock }) => {
+export const ItemDetail = ({ name, description, img, price, stock }) => {
+
     return (
         <>
             <div className="border border-1 border-dark rounded-3  p-3 m-2">
@@ -9,10 +10,9 @@ export const Item = ({ id, name, img, description, stock }) => {
                 <p> {description} </p>
                 <p>Stock: {stock}</p>
                 
-                <Link to={`/item/${id}`} >
-                    <button className="btn btn-dark">Detalles</button>
-                </Link>
+                <ItemCount stock={stock} />
             </div>
         </>
-    )
-}
+
+    );
+};

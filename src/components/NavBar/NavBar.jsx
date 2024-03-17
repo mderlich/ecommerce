@@ -11,13 +11,14 @@ export const NavBar = () => {
       <header >
 
         <Link to="/" className="logo">
-          <img src="./img/logo-laundry.png" alt="Logo" />
+          <img src="/img/logo-laundry.png" alt="Logo" />
         </Link>
 
         <nav className="navbar">
 
-          <Link to="/genero/hombre">Hombre</Link>
-          <Link to="/genero/mujer">Mujer</Link>
+          <Link to="/category/hombre">Hombre</Link>
+          <Link to="/category/mujer">Mujer</Link>
+          <Link to="/category/ninos">Niños</Link>
           <a href="#"><i className="fas fa-search"></i></a>
           <a href="#"><i className="fas fa-heart"></i></a>
 
