@@ -1,9 +1,9 @@
 
 const products = [
-    { id: "1", name: "Camisa", description: "Una camisa", category: "mujer", img: "urlimg", price: 23, stock: 4 },
-    { id: "2", name: "Corbata", description: "Una Corbata", category: "hombre", img: "urlimg", price: 23, stock: 8 },
-    { id: "3", name: "Pantalón", description: "Un Pantalón", category: "mujer", img: "urlimg", price: 23, stock: 10 },
-    { id: "4", name: "Zapatilla", description: "Una Zapatilla", category: "mujer", img: "urlimg", price: 23, stock: 10 },
+    { id: "1", name: "Camisa", description: "Una camisa", category: "mujer", img: "urlimg", price: 120, stock: 4 },
+    { id: "2", name: "Corbata", description: "Una Corbata", category: "hombre", img: "urlimg", price: 100, stock: 8 },
+    { id: "3", name: "Pantalón", description: "Un Pantalón", category: "mujer", img: "urlimg", price: 200, stock: 10 },
+    { id: "4", name: "Zapatilla", description: "Una Zapatilla", category: "mujer", img: "urlimg", price: 300, stock: 10 },
 ];
 
 // //////////////////////////////////////////////////////////
