@@ -30,7 +30,13 @@ export const CartContextProvider = ({ children }) => {
         }
         // y si no se encuentra, lo añanidmos
         else {
-            const newItem = { ...item, quantity, subtotal: item.price * quantity }
+
+            const newItem = {
+                ...item,
+                quantity,
+                subtotal: item.price * quantity
+            }
+
             setCart([...cart, newItem])
         }
 
@@ -67,7 +73,7 @@ export const CartContextProvider = ({ children }) => {
         setTotalPrice(newTotalPrice);
     }
     // Carrito / Actualizacion *********************************************
-    useEffect( () =>{
+    useEffect(() => {
         handleTotalItems();
         handleTotalPrice();
     }, [cart])

@@ -3,11 +3,13 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
 // COMPONENTES
-import { Contenedor } from "../Contenedor/Contenedor"
 import { ItemList } from "../ItemList/ItemList"
+import { db } from "../../config/firebaseConfig"
+import { collection, getDocs } from "firebase/firestore";
 
-// LISTA DE PRODUCTOS
-import { getProducts } from "../../AsyncMock";
+// Para insertar a la DB
+import { seedProducts } from "../../config/utils/seedProducts";
+
 
 
 // faltan...
@@ -25,31 +27,49 @@ export const ItemListContainer = ({ greeting }) => {
 
   const { category } = useParams()  // util para parametro de navegacion, se vuelve a llamar al final del useEffect
 
+  
+  // productos desde DB ************************************
+  const getProductsDB = () => {
+    // referencia a nuestra coleccion de db
+    //const myProducts = collection(db, "products");
+    //const myProducts = collection(db, "products");
+    const myProducts = collection(db, "products");
+      
+    //obtener los documentos de db
+    getDocs(myProducts)
+      .then(response => {
+        //console.log(response.docs[0].id);
+        //console.log(response.docs[0].data());
+        /* 
+         const item ={
+           id: response.docs[0].id,
+           ...response.docs[0].data(),
+         }
+         console.log(item) 
+         */
 
+        const productList = response.docs.map(doc => {
+          const item = {
+            id: doc.id,
+            ...doc.data()
+          }
+          return item;
+        })
+
+        // console.log(productList)
+        // guardamos nuestros productos ordenados
+        setProductsList(productList);
+        setLoading(false)
+      })
+
+
+  }
   // useEffect ************************************
   useEffect(() => {
-
-    setLoading(true) // iniciamos el loading...
-    setError(null) // iniciamos el loading...
-    setProductsList([]) // iniciamos el loading...
-
-    // llamado de productos /////////////////////
-    getProducts(category)
-
-      // atrapamos la respuesta de la promesa...
-      .then(resp => setProductsList(resp))
-
-      .catch((error) => {
-        setError(error)
-
-      }
-      )
-
-      .finally(() => setLoading(false));  // cortamos el loading...
-
-    // /////////////////////////////////////////
-
-
+    setLoading(true)
+    getProductsDB(category)
+    //seedProducts()
+    
   }, [category])
   // when category change, reload and set a new products list on the app
   // *********************************************

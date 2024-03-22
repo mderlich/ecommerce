@@ -7,8 +7,10 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import { NavBar } from "./components/NavBar/NavBar"
 import { Cart } from "./components/Cart/Cart";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
-import { CartContextProvider } from "./context/CartContext";
 
+// LOS ULTIMOS...
+import { CartContextProvider } from "./context/CartContext";
+import { CheckOut } from "./components/CheckOut/CheckOut";
 // -----------------------------
 
 const App = () => {
@@ -29,6 +31,7 @@ const App = () => {
               <Route path="/" element={<ItemListContainer greeting={'Bienvenidos'} />} />
               <Route path="/category/:category" element={<ItemListContainer />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<CheckOut />} />
               <Route path="/item/:id" element={<ItemDetailContainer />} />
 
               {/* PAGINA DE ERROR */}
