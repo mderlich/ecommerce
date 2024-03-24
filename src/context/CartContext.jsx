@@ -52,7 +52,6 @@ export const CartContextProvider = ({ children }) => {
         setCart(cartFiler)
 
     }
-    // --------------------------
 
     // ************************************************
     // Limpiar el carrito

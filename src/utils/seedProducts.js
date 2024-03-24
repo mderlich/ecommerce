@@ -3,7 +3,6 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from "../config/firebaseConfig";
 
 // Los 'id' los borramos, ya que Firebase los crea
-
 const products = [
     { name: "Camisa", description: "Una camisa", category: "mujer", img: "urlimg", price: 120, stock: 4 },
     { name: "Corbata", description: "Una Corbata", category: "hombre", img: "urlimg", price: 100, stock: 8 },

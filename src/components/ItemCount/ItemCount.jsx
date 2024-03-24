@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-export const ItemCount = ({ stock, initial = 0, onAdd }) => {
+// OBS: se pone valor inicial en 1 porque si pones 0 estarias cargan producto nulo en el carro
+export const ItemCount = ({ stock, initial = 1, onAdd }) => {
   const [count, setCount] = useState(initial);
 
   const increment = () => {
@@ -11,8 +12,9 @@ export const ItemCount = ({ stock, initial = 0, onAdd }) => {
   };
 
   const decrement = () => {
-    if (count === 0) {
-      return setCount(0);
+    // se puso en 1 para que si pone 0, puede darle agregar cero producto a carrito
+    if (count === 1) {
+      return setCount(1);
     }
     setCount(count - 1);
   };

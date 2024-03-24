@@ -1,32 +1,34 @@
+// REACT
 import { Link } from "react-router-dom";
 
-// Cargamos los estilos...
+// COMPONENTES...
 import { CartWidget } from '../CartWidget/CartWidget'
+
+// ESTILOS...
 import '../NavBar/NavBar.css'
 
+// ************************************************
 export const NavBar = () => {
   return (
 
-    <>
-      <header >
+    <header >
 
-        <Link to="/" className="logo">
-          <img src="/img/logo-laundry.png" alt="Logo" />
-        </Link>
+      <Link to="/" className="logo">
+        <img src="/img/logo-laundry.png" alt="Logo" />
+      </Link>
 
-        <nav className="navbar">
+      <nav className="navbar">
 
-          <Link to="/category/hombre">Hombre</Link>
-          <Link to="/category/mujer">Mujer</Link>
-          <Link to="/category/ninos">Niños</Link>
-          <a href="#"><i className="fas fa-search"></i></a>
-          <a href="#"><i className="fas fa-heart"></i></a>
+        <Link to="/category/hombre">Hombre</Link>
+        <Link to="/category/mujer">Mujer</Link>
+        <Link to="/category/ninos">Niños</Link>
 
-          <CartWidget />
+        <CartWidget />
 
-        </nav>
+      </nav>
 
-      </header>
-    </>
+    </header>
+
   )
 }
+// ************************************************
