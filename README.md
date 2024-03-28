@@ -15,11 +15,20 @@ https://www.linkedin.com/in/federicocurrao/
 
 
 ## URL del proyecto
-http
+
 
 ## El proyecto en imagenes
 Opte por replicar lo mas agil posible la tienda de ropas Laundry
 
+![imagen1](https://raw.githubusercontent.com/mderlich/ecommerce/master/public/img/about/tienda1.png "imagen1")
+
+-------------------
+
+![imagen2](https://raw.githubusercontent.com/mderlich/ecommerce/master/public/img/about/tienda2.png "imagen2")
+
+-------------------
+
+![imagen3](https://raw.githubusercontent.com/mderlich/ecommerce/master/public/img/about/tienda3.png "imagen3")
 
 ## ¿En que consistio?
 
@@ -57,4 +66,3 @@ https://github.com/mderlich/ecommerce.git
 - Asegurate de estar dentro de la carpeta del proyecto con tu VSCODE
 
 - Luego instala las dependencias con "npm install"
-
