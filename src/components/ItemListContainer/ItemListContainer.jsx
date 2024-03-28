@@ -5,6 +5,9 @@ import { useParams } from "react-router-dom"
 // COMPONENTES
 import { ItemList } from "../ItemList/ItemList"
 
+// CSS
+import './ItemListContainer.css';
+
 // DB FIREBASE
 import { db } from "../../config/firebaseConfig"
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -80,10 +83,15 @@ export const ItemListContainer = ({ greeting }) => {
             <h2>Cargando Productos...</h2>
             <div className="spinner-border" role="status"></div>
           </div>
+          
           :
           <>
             {products.length === 0 && <h2>Categoria sin productos</h2>}
-            {products.length > 0 && <ItemList products={products} />}
+            {products.length > 0 && 
+            <div className="productsFlex">
+            <ItemList products={products} />
+            </div>
+            }
           </>
       }
     </>

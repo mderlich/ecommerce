@@ -1,0 +1,8 @@
+.productsFlex{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 30px;
+    /* background-color: aqua; */
+    justify-content: space-between;
+}

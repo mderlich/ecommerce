@@ -1,0 +1,28 @@
+.btn{
+    width: auto;
+}
+
+.button-container {
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  
+  .action-button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Borde redondeado */
+    padding: 8px 12px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 0 5px; /* Margen entre botones */
+    cursor: pointer; /* Cursor al pasar por encima */
+    width: 80px;
+  }
+  
+  .action-button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el cursor por encima */
+  }
+  

@@ -8,6 +8,8 @@ import { CartContext } from "../../context/CartContext"
 //SWEETALERT...
 import Swal from "sweetalert2";
 
+// CSS
+import './Cart.css';
 
 // **************************************************
 export const Cart = () => {
@@ -41,34 +43,76 @@ export const Cart = () => {
     <>
 
 
+
+
+      {totalPrice > 0 && (
+        <>
+          <div className="detalle">
+            <div className="encabezado">Artículo</div>
+            <div className="encabezado">Cantidad</div>
+            <div className="encabezado">Precio Unitario</div>
+            <div className="encabezado">Subtotal</div>
+            <div className="encabezado">(borrar)</div>
+          </div>
+        </>
+      )}
+
+
+
+
+
       {/* mapeamos los items en carrito... */}
       {cart.map((item) => (
 
-        <div key={item.id} className="border border-1 border-dark rounded-3  p-3 m-2">
-          <h5> {item.name} </h5>
-          <p>Cantidad: {item.quantity} </p>
-          <p>Precio Unitario: ${item.price} </p>
-          <p>Subtotal: ${item.subtotal}</p>
-
-          <button className="btn btn-danger" onClick={() =>  handleDeleteItem(item)}>
-            Eliminar
-          </button>
+        <div class="detalle" key={item.id} >
+          <div class="dato">{item.name}</div>
+          <div class="dato">{item.quantity}</div>
+          <div class="dato">${item.price}</div>
+          <div class="dato">${item.subtotal}</div>
+          <div class="dato">
+            <button className="btn btn-danger" onClick={() => handleDeleteItem(item)}>
+              Eliminar
+            </button>
+          </div>
         </div>
 
-
       ))}
+      {/* ---------------------------- */}
+
+
+
       {
 
         totalPrice > 0 ?
           // Hay productos...
           <>
-            <h2>Total: ${totalPrice}</h2>
-            <button className="btn btn-outline-success" onClick={clearCart}>
-              Vaciar carrito
-            </button>
-            <Link to="/checkout">
-              <button className="ms-2 btn btn-success">Comprar</button>
-            </Link>
+
+            <div class="detalle"  >
+              <div class="dato"> </div>
+              <div class="dato"> </div>
+              <div class="dato"><h2>Total: </h2></div>
+              <div class="dato"><h2>${totalPrice}</h2></div>
+              <div class="dato">
+                <Link to="/checkout">
+                  <button className="ms-2 btn btn-success">Comprar</button>
+                </Link>
+              </div>
+            </div>
+
+            <div class="detalle"  >
+              <div class="dato"> </div>
+              <div class="dato"> </div>
+              <div class="dato"> </div>
+              <div class="dato"> </div>
+              <div class="dato">
+                <button className="btn btn-outline-success" onClick={clearCart}>
+                  Vaciar carrito
+                </button>
+              </div>
+            </div>
+
+
+
           </>
           :
           // Sin productos...

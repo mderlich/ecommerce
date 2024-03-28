@@ -1,0 +1,16 @@
+.detalle {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #dddddd;
+    width: 100%;
+  }
+  .encabezado {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    padding: 8px;
+    flex: 1;
+  }
+  .dato {
+    padding: 8px;
+    flex: 1;
+  }

@@ -1,0 +1,39 @@
+.custom-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  
+  .image-container {
+    margin-right: 20px; /* Ajusta el espacio entre la imagen y el contenido */
+  }
+  
+  .image-container img {
+    max-width: 300px;
+    
+  }
+
+  img{
+    border-radius: 10px;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+/* ------------------ */
+/* .info{
+    
+    
+    background-color: aquamarine;
+
+    border: 1px solid #343a40;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+ */
