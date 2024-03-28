@@ -1,6 +1,7 @@
 # Proyecto Final del Curso de React Js (Web App de e-commerce)
 
 Este proyecto lo realice durante el primer trimestre del año 2024 para el curso de React JS de la Academia Coderhouse.
+Opte por replicar lo mas agil posible la tienda de ropas Laundry.
 
 Duracion: del 16 enero al 12 marzo
 
@@ -8,17 +9,16 @@ Autor: **Matías Derlich**
 https://www.linkedin.com/in/ingmderlich/
 
 Profesor: *Luis Alejandro Mera*  
-https://www.linkedin.com/in/luis-mera-developer/ 
 
 Tutor: *Federico Currao* 
-https://www.linkedin.com/in/federicocurrao/
 
 
 ## URL del proyecto
+https://laundryreactecommerce.netlify.app/
 
 
 ## El proyecto en imagenes
-Opte por replicar lo mas agil posible la tienda de ropas Laundry
+
 
 ![imagen1](https://raw.githubusercontent.com/mderlich/ecommerce/master/public/img/about/tienda1.png "imagen1")
 

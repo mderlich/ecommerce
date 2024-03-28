@@ -8,10 +8,8 @@ export const Item = ({ id, name, img, description, price }) => {
         <>
             <div className="item">
 
-                <img src={"/public/img/products/" + img + ".jpg"} alt={name} />
+                <img src={img} alt={name} />
                 <h5> {name} </h5>
-                <img src={img} alt="" />
-                {/* <p> {description} </p> */}
                 <div>
                     <p>Precio: ${price}</p>
 

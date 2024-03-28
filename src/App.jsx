@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <>
-    
+
 
       <CartContextProvider>
         <BrowserRouter>
@@ -43,7 +43,9 @@ const App = () => {
           </main>
 
           <footer>
-            Hecho con <i className="fas fa-heart"></i> desde Argentina
+            <a href="https://github.com/mderlich/ecommerce" target="_blank">
+              Hecho con <i className="fas fa-heart"></i> desde Argentina
+            </a>
           </footer>
 
         </BrowserRouter>

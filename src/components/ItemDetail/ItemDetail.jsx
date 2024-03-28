@@ -38,7 +38,7 @@ export const ItemDetail = ({ id, name, description, img, price, stock }) => {
 
             <div className="custom-container">
                 <div className="image-container">
-                    <img src={"/public/img/products/" + img + ".jpg"} alt={name} />
+                    <img src={img} alt={name} />
                 </div>
                 <div className="info">
                     <h5><b>{name} </b> </h5>
